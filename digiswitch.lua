@@ -177,7 +177,7 @@ minetest.register_node("lwcomputers:digiswitch", {
       }
    },
 	groups = digiswitch_groups,
-	sounds = default.node_sound_stone_defaults (),
+	sounds = xcompat.sounds.node_sound_stone_defaults (),
 	mesecons = mesecon_support (),
 	digiline = digilines_support (),
 	_digistuff_channelcopier_fieldname = "channel",

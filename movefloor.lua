@@ -196,7 +196,7 @@ minetest.register_node("lwcomputers:movefloor", {
       }
    },
 	groups = movefloor_groups,
-	sounds = default.node_sound_wood_defaults (),
+	sounds = xcompat.sounds.node_sound_wood_defaults (),
 	mesecons = mesecon_support (),
 
 	on_timer = on_timer,

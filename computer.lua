@@ -954,7 +954,7 @@ minetest.register_node("lwcomputers:computer", {
       }
    },
 	groups = { cracky = 2, oddly_breakable_by_hand = 2, bundles_connect = 1 },
-	sounds = default.node_sound_wood_defaults (),
+	sounds = xcompat.sounds.node_sound_wood_defaults (),
 	paramtype = "light",
 	param1 = 0,
 	paramtype2 = "facedir",
@@ -998,7 +998,7 @@ minetest.register_node("lwcomputers:computer_on", {
       }
    },
 	groups = { cracky = 2, oddly_breakable_by_hand = 2, not_in_creative_inventory = 1, bundles_connect = 1 },
-	sounds = default.node_sound_wood_defaults (),
+	sounds = xcompat.sounds.node_sound_wood_defaults (),
 	paramtype = "light",
 	param1 = 0,
 	paramtype2 = "facedir",
@@ -1066,7 +1066,7 @@ minetest.register_node("lwcomputers:computer_robot", {
       fixed = { -0.5, -0.5, -0.375, 0.5, 0.5, 0.375 }
    },
 	groups = { cracky = 2, oddly_breakable_by_hand = 2 },
-	sounds = default.node_sound_wood_defaults (),
+	sounds = xcompat.sounds.node_sound_wood_defaults (),
 	paramtype = "light",
 	param1 = 0,
 	paramtype2 = "facedir",
@@ -1136,7 +1136,7 @@ minetest.register_node("lwcomputers:computer_robot_on", {
       fixed = { -0.5, -0.5, -0.375, 0.5, 0.5, 0.375 }
    },
 	groups = { cracky = 2, oddly_breakable_by_hand = 2, not_in_creative_inventory = 1 },
-	sounds = default.node_sound_wood_defaults (),
+	sounds = xcompat.sounds.node_sound_wood_defaults (),
 	paramtype = "light",
 	param1 = 0,
 	paramtype2 = "facedir",

@@ -38,5 +38,6 @@ return
 	["farming:soy_pod"] = "farming:soy_1",
 	["farming:vanilla"] = "farming:vanilla_1",
 	["farming:seed_sunflower"] = "farming:sunflower_1",
-	["default:torch"] = { "default:torch_wall", down = "default:torch", up = "default:torch_ceiling" }
+	["default:torch"] = { "default:torch_wall", down = "default:torch", up = "default:torch_ceiling" },
+	["mcl_torches:torch"] = { "mcl_torches:torch_wall", down = "mcl_torches:torch" }
 }

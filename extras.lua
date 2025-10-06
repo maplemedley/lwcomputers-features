@@ -44,9 +44,9 @@ if not depreciated then
 	minetest.register_craft({
 		output = "lwcomputers:touchscreen",
 		recipe = {
-			{"mesecons_luacontroller:luacontroller0000","default:glass","default:glass"},
-			{"default:glass","digilines:lcd","default:glass"},
-			{"default:glass","default:glass","default:stone"}
+			{"mesecons_luacontroller:luacontroller0000",xcompat.materials.glass,xcompat.materials.glass},
+			{xcompat.materials.glass,"digilines:lcd",xcompat.materials.glass},
+			{xcompat.materials.glass,xcompat.materials.glass,xcompat.materials.stone}
 		}
 	})
 end
@@ -93,7 +93,7 @@ if not depreciated then
 		recipe = {
 			{"","digistuff:button",""},
 			{"digistuff:button","digilines:lcd","digistuff:button"},
-			{"","digistuff:button","default:stone"}
+			{"","digistuff:button",xcompat.materials.stone}
 		}
 	})
 end

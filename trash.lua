@@ -64,7 +64,7 @@ minetest.register_node("lwcomputers:trash", {
       }
    },
 	groups = { cracky = 2, oddly_breakable_by_hand = 2 },
-	sounds = default.node_sound_wood_defaults (),
+	sounds = xcompat.sounds.node_sound_wood_defaults (),
 
    on_construct = on_construct,
 	on_metadata_inventory_put = on_metadata_inventory_put

@@ -53,7 +53,7 @@ local function get_paper (meta)
 	if inv then
 		local stack = inv:get_stack ("paper", 1)
 
-		if stack and stack:get_name () == "default:paper" then
+		if stack and stack:get_name () == xcompat.materials.paper then
 			return stack:get_count ()
 		end
 	end
@@ -160,7 +160,7 @@ local function start_page (pos, meta, title)
 			if ink and not ink:is_empty () then
 				local stack = inv:get_stack ("paper", 1)
 
-				if stack and stack:get_name () == "default:paper" then
+				if stack and stack:get_name () == xcompat.materials.paper then
 					if stack:get_count () > 0 then
 						stack:take_item (1)
 						inv:set_stack ("paper", 1, stack)
@@ -312,7 +312,7 @@ local function get_formspec ()
 	"button[8.75,1.0;2.0,0.8;clear_jam;Clear]"..
 	"item_image[1.0,2.5;1.0,1.0;lwcomputers:ink_cartridge]"..
 	"list[context;ink;2.25,2.5;1,1;]"..
-	"item_image[3.5,2.5;1.0,1.0;default:paper]"..
+	"item_image[3.5,2.5;1.0,1.0;"..xcompat.materials.paper.."]"..
 	"list[context;paper;4.75,2.5;1,1;]"..
 	"item_image_button[8.5,2.5;1.0,1.0;lwcomputers:book;book;]"..
 	"tooltip[book;Make Book;#094109;#FFFFFF]"..
@@ -557,7 +557,7 @@ local function allow_metadata_inventory_put (pos, listname, index, stack, player
 					return 1
 				end
 			elseif listname == "paper" then
-				if itemname == "default:paper" then
+				if itemname == xcompat.materials.paper then
 					return lwcomp.settings.default_stack_max
 				end
 			elseif listname == "book" then
@@ -651,7 +651,7 @@ minetest.register_node("lwcomputers:printer", {
       }
    },
 	groups = { cracky = 2, oddly_breakable_by_hand = 2 },
-	sounds = default.node_sound_wood_defaults (),
+	sounds = xcompat.sounds.node_sound_wood_defaults (),
 	paramtype2 = "facedir",
 	param2 = 1,
 	digiline = digilines_support (),
