@@ -1,4 +1,4 @@
-default
+xcompat
 intllib?
 mesecons?
 digilines?
